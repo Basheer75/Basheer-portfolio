@@ -1,0 +1,209 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar" class="flex s-around bg-color">
+      <div class="left-nav">
+        <h2 class="t-white">Portfolio</h2>
+      </div>
+      <ul class="flex">
+        <li>
+          <a href="#home" class="t-white roboto nav-col">
+            Home <i class="fa-solid fa-house"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#about" class="t-white roboto nav-col">
+            About Me <i class="fa-solid fa-user"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#skills" class="t-white roboto nav-col">
+            Skills <i class="fa-solid fa-code"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#project" class="t-white roboto nav-col">
+            Project <i class="fa-solid fa-diagram-project"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#contact" class="t-white roboto nav-col">
+            Contact <i class="fa-solid fa-rocket"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="flex justify-around w-80 m-auto">
+      <div class="home-left flex items-center">
+        <div class="home-center">
+          <h6 class="poppins">Hi, I'm</h6>
+          <h1 class="t-white m-b-1 poppins">Basheer</h1>
+          <h4 class="poppins">Software Engineer</h4>
+          <div class="buttons">
+            <a href="{% static 'pdf/django.pdf' %}" target="_blank">
+              <button class="btn poppins">Resume</button>
+            </a>
+            <a href="mailto:your.email@example.com" target="_blank">
+              <button class="btn poppins" id="hireme">Let's Talk</button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="home-right flex s-center items-center">
+        <div class="circle flex s-center items-center" id="mainImage">
+          <img
+            src="{% static 'images/profile.png' %}"
+            alt="Profile picture"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h1 class="t-center my-2 t-white f-2">About</h1>
+      <div class="about-container flex s-around">
+        <div class="about-left flex s-center items-center">
+          <img src="{% static 'images/dog.png' %}" alt="About Image" />
+        </div>
+        <div class="about-right flex items-center">
+          <div class="about-content">
+            <h1 class="t-white m-b-1 poppins">Basheer</h1>
+            <p class="t-white poppins">
+              I'm a passionate software engineer with a focus on building scalable web applications. Skilled in full-stack development, I enjoy tackling complex problems and creating user-friendly solutions.
+            </p>
+            <a href="#contact" class="btn poppins">Hire Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="my-2 bg-color">
+      <h1 class="t-center my-2 t-white f-2">Skills</h1>
+      <div class="skills-container flex s-around items-start w-80 m-auto">
+        <div class="skills-left flex s-center items-center">
+          <img src="{% static 'images/pro.png' %}" alt="Skills Image" />
+        </div>
+        <div class="skills-right flex items-center">
+          <ul class="skill-list t-white poppins">
+            <li><span class="font-semibold">Programming Languages:</span> C, C++, Python</li>
+            <li><span class="font-semibold">Web Technologies:</span> HTML, CSS, JavaScript, Django, MERN</li>
+            <li><span class="font-semibold">Tools:</span> Git, GitHub, VS Code</li>
+            <li><span class="font-semibold">Concepts:</span> OOP, Data Structures</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="project" class="my-2 bg-color">
+      <h1 class="t-center my-2 t-white f-2">Projects</h1>
+      <div class="projects-container flex s-around flex-wrap w-80 m-auto">
+        <!-- Student Management System -->
+        <div class="projects-item">
+          <h2 class="t-white poppins">Student Management System</h2>
+          <p class="t-white poppins">
+            Django-based app to manage student records, attendance, subjects, and grades. Features role-based dashboards and full CRUD.
+          </p>
+          <a href="https://github.com/Basheer75/Student-Management-System" target="_blank" class="btn poppins">GitHub</a>
+        </div>
+
+        <!-- Code Translation Challenge -->
+        <div class="projects-item">
+          <h2 class="t-white poppins">Code Translation Learning Challenge <small class="text-sm">(In Progress)</small></h2>
+          <p class="t-white poppins">
+            Practice translating code snippets between languages. Built with Django and JavaScript; includes dynamic challenge assignment and code-validation logic.
+          </p>
+          <a href="https://github.com/KMyasar/Code-Translation" target="_blank" class="btn poppins">GitHub</a>
+        </div>
+
+        
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="m-b-1">
+      <h1 class="t-center my-2 t-white f-2">Contact Me</h1>
+      <div class="Contact-container flex s-around items-center">
+        <div class="form" id="contactform">
+          <form method="post">
+            {% csrf_token %}
+            <div class="form-div">
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your Name"
+                required
+              />
+            </div>
+            <div class="form-div">
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your Email"
+                required
+              />
+            </div>
+            <div class="form-div">
+              <input
+                type="tel"
+                name="number"
+                placeholder="Enter your Phone number"
+                required
+              />
+            </div>
+            <div class="form-div">
+              <textarea
+                name="content"
+                id="textarea"
+                cols="30"
+                rows="10"
+                class="poppins"
+                placeholder="Enter your message"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn poppins">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <ul class="flex s-center w-80 m-auto my-2 res">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#project">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <ul class="flex s-center w-80 font-awesome">
+        <li>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
