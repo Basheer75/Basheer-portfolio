@@ -123,66 +123,61 @@ body {
 .about-content p {
     margin-bottom: 2rem;
 }
-
 /* Skills Section */
 #skills {
     margin-top: 3rem;
 }
 
 .skills-container {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
 }
 
-.skills-left {
-    width: 50%;
-}
-
-.skills-right {
-    width: 50%;
-}
-
-.skills-right img {
-    width: 100%;
-    border-radius: 1rem;
+.skill-subheading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+    color: #df77ad;
+    text-align: center;
 }
 
 .skill-item {
-    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 1rem;
 }
 
-.progress-bar {
-    width: 100%;
-    height: 0.5rem;
+.skill-item span {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.bar {
     background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
+    height: 0.8rem;
+    border-radius: 10px;
     overflow: hidden;
 }
 
-.progress {
+.fill {
     height: 100%;
-    background-color: #007bff;
-    border-radius: 12px;
+    background: linear-gradient(90deg, #dc85a7, #da7fa8);
+    text-align: right;
+    padding-right: 0.5rem;
+    font-size: 0.8rem;
+    color: #1f1f38;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
 }
 
-.progress.programming-languages {
-    width: 90%;
-}
-
-.progress.web-technologies {
-    width: 85%;
-}
-
-.progress.tools {
-    width: 80%;
-}
-
-.progress.concepts {
-    width: 75%;
-}
-
-.mr-2 {
-    margin-right: 0.5rem;
-}
 
 /* Projects Section */
 .projects-container {
