@@ -157,7 +157,7 @@
       <h1 class="t-center my-2 t-white f-2">Contact Me</h1>
       <div class="Contact-container flex s-around items-center">
         <div class="form" id="contactform">
-          <form method="post">
+          <form action="https://formspree.io/f/xblyyopg" method="POST">
             {% csrf_token %}
             <div class="form-div">
               <input
@@ -194,7 +194,7 @@
                 required
               ></textarea>
             </div>
-            <button type="submit" class="btn poppins">Send</button>
+            <button type="submit" name="submit" class="btn poppins">Send</button>
           </form>
         </div>
       </div>
