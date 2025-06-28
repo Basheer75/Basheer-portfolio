@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Basheer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Basheer Portfolio</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" data-aos="fade-up">
+  <h1>Hi, I'm Mohammed Basheer J</h1>
+  <p>Aspiring Developer | Web Enthusiast</p>
+
+  <div class="buttons">
+    <a href="images/Mohd-Basheerj-Resume.pdf" target="_blank">
+      <button class="btn poppins">Resume</button>
+    </a>
+    <a href="mailto:basheermohammed925@gmail.com" target="_blank">
+      <button class="btn poppins" id="hireme">Let’s Talk</button>
+    </a>
+  </div>
+</section>
+
+
+  <!-- About Section -->
+  <section id="about" class="section" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>I’m a recent MCA graduate passionate about building and improving web applications. I’ve developed full-stack 
+projects using both Django and the MERN stack, including a deployed code translation platform with features like 
+code conversion (Python, Java, C++), authentication, and real-time test case validation. I’ve also explored data analysis 
+using Python, Pandas, and Power BI to extract insights from real-world data. I enjoy solving technical challenges, 
+learning new tools, and contributing to collaborative, user-focused solutions. </p>
+  </section>
+
+
+  <section id="projects" class="section" data-aos="fade-up">
+  <h2>Projects</h2>
+  <div class="project-grid">
+
+    <div class="project-card">
+      <h3>CodeFlick</h3>
+      <p>A web-based code translation platform that converts code between Python, Java, and C++ with test case validation and editor interface.</p>
+      <a href="https://codeflick.onrender.com/">Live Host</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Task Management System</h3>
+      <p>Built using MERN stack with user login, task CRUD operations, priority filters, and a dashboard view.</p>
+      <a href="https://github.com/Basheer75/Task-management">Github Link</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Student Management System</h3>
+      <p>Django-based CRUD web app to manage student records, grades, attendance, and admin authentication.</p>
+      <a href="https://github.com/Basheer75/Django_project">Github Link</a>
+    </div>
+
+    <div class="project-card">
+      <h3>F1 Data Analysis</h3>
+      <p>Used Python and Pandas to analyze Formula 1 race data — visualized insights using Power BI and Matplotlib.</p>
+      <a href="https://github.com/Basheer75/Python_project_F1">Github Link</a>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Skills Section -->
+  <section id="skills" class="section" data-aos="fade-up">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/><span>HTML</span></div>
+      <div class="skill-tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/><span>CSS</span></div>
+      <div class="skill-tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/><span>JavaScript</span></div>
+      <div class="skill-tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/><span>Python</span></div>
+      <div class="skill-tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"/><span>C++</span></div>
+      <div class="skill-tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"/><span>MongoDB</span></div>
+      <div class="skill-tile"><img src="https://img.icons8.com/color/48/000000/power-bi.png"/><span>Power BI</span></div>
+    </div>
+  </section>
+
+  
+
+
+  <section id="certifications" class="section" data-aos="fade-up">
+  <h2>Certifications</h2>
+  <div class="carousel-wrapper">
+    <button class="carousel-btn" id="prevCert">&#10094;</button>
+
+    <div class="carousel">
+      <img src="images/python.jpg" class="cert active" alt="Scaler Python">
+      <img src="images/js.jpg" class="cert" alt="Udemy JS">
+      <img src="images/django.jpg" class="cert" alt="Django">
+      <img src="images/mern.jpg" class="cert" alt="MERN Stack">
+      <img src="images/csc.jpg" class="cert" alt="DCA / CSC">
+    </div>
+
+    <button class="carousel-btn" id="nextCert">&#10095;</button>
+  </div>
+</section>
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="section" data-aos="fade-up">
+  <h2>Contact Me</h2>
+  <div class="contact-container">
+    <form action="https://formspree.io/f/xblyyopg" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="number" placeholder="Your Phone Number" required />
+      <textarea name="content" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+</body>
+</html>
