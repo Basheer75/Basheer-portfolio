@@ -197,31 +197,41 @@ body {
 
 .carousel {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 2rem;
+  align-items: center;
   overflow: hidden;
   width: 100%;
-  max-width: 1000px;
+  max-width: 900px;
+  position: relative;
 }
+
+
 
 .cert {
   width: 120px;
   height: auto;
-  border-radius: 10px;
   opacity: 0.4;
-  transition: all 0.5s ease-in-out;
   transform: scale(0.8);
+  transition: all 0.5s ease;
+  border-radius: 10px;
   border: 1px solid #444;
 }
+
+
+
+
 
 .cert.active {
   width: 300px;
   opacity: 1;
   transform: scale(1.05);
-  box-shadow: 0 0 20px #8a2be2;
   border: 2px solid #8a2be2;
+  box-shadow: 0 0 20px #8a2be2;
+  z-index: 2;
 }
+
+
+
 
 .carousel-btn {
   background: transparent;
