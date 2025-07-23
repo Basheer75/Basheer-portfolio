@@ -1,6 +1,4 @@
-// script.js – updated for true one-at-a-time certificate carousel (no scrollbar)
-
-// Smooth scrolling for nav links
+// Smooth scroll for navbar links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -11,7 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Certificate Carousel - One-at-a-time
+// Certification Carousel Logic
 const certs = document.querySelectorAll(".cert");
 let current = 0;
 
@@ -34,4 +32,4 @@ document.getElementById("nextCert").addEventListener("click", () => {
   updateCarousel();
 });
 
-updateCarousel(); // initialize carousel
+updateCarousel(); // Load the first cert on page load

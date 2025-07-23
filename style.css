@@ -201,34 +201,31 @@ body {
   align-items: center;
   overflow: hidden;
   width: 100%;
-  max-width: 900px;
+  max-width: 1000px;
   position: relative;
 }
 
-
-
 .cert {
+  display: none;
   width: 120px;
   height: auto;
-  opacity: 0.4;
-  transform: scale(0.8);
-  transition: all 0.5s ease;
   border-radius: 10px;
   border: 1px solid #444;
+  opacity: 0.4;
+  transform: scale(0.8);
+  transition: all 0.4s ease;
 }
 
-
-
-
-
 .cert.active {
+  display: block;
   width: 300px;
   opacity: 1;
   transform: scale(1.05);
   border: 2px solid #8a2be2;
   box-shadow: 0 0 20px #8a2be2;
-  z-index: 2;
+  z-index: 10;
 }
+
 
 
 
